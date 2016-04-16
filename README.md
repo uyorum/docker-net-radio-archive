@@ -10,7 +10,7 @@ Run net-radio-archive in Docker container
 * MySQL，ねとらじあーかいぶを起動させるdocker-compose.yml
 
 ## ねとらじあーかいぶ
-ソフトウェアの詳細は[本家リポジトリ](https://github.com/yayugu/net-radio-archive)を参照してください．今のところAG-ONとニコ生には非対応です．  
+ソフトウェアの詳細は[本家リポジトリ](https://github.com/yayugu/net-radio-archive)を参照してください．今のところニコ生には非対応です．  
 設定は以下の環境変数で調整してください．
 
 |環境変数|デフォルト|設定例|説明|
@@ -19,6 +19,8 @@ Run net-radio-archive in Docker container
 |NRA_RADIKO_CHANNELS|(空)|QRR,LFT|settings.ymlの`radiko_channels`|
 |NRA_RADIRU_CHANNELS|(空)|r1,r2,fm|settings.ymlの`radiru_channels`|
 |NRA_FORCE_MP4|false|true|settings.ymlの`force_mp4`|
+|NRA_AGON_MAIL|(空)|foo@example.com|settings.ymlの`agon.mail`|
+|NRA_AGON_PASSWORD|(空)|XXXXXX|settings.ymlの`agon.password`|
 |NRA_DB_HOST|net-radio.db||database.ymlの`host`|
 |NRA_DB_USER|root||database.ymlの`username`|
 |NRA_DB_PASSWORD|password||database.ymlの`password`|
@@ -49,4 +51,5 @@ Dockerホストの`/net-radio`ディレクトリにダウンロードしたコ�
 $ docker-compose up -d
 ```
 
-ねとらじあーかいぶの設定をいくつかデフォルトから変更しています．詳細はdocker-dompose.ymlを見てください．
+必要に応じてねとらじあーかいぶの設定(環境変数)を追加・変更して使用してください．  
+なおいくつかの値をデフォルトから変更しています．詳細はdocker-dompose.ymlを見てください．
