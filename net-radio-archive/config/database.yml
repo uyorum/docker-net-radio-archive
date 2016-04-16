@@ -8,9 +8,9 @@ default: &default
   adapter: mysql2
   encoding: utf8mb4
   pool: 5
-  username: <%= ENV['NRA_User'] %>
-  password: <%= ENV['NRA_DBPassword'] %>
-  host: <%= ENV['NRA_DBHost'] %>
+  username: <%= ENV['NRA_USER'] %>
+  password: <%= ENV['NRA_DB_PASSWORD'] %>
+  host: <%= ENV['NRA_DB_HOST'] %>
 
 development:
   <<: *default
@@ -25,4 +25,4 @@ test:
 
 production:
   <<: *default
-  database: <%= ENV['NRA_DBName'] %>
+  database: <%= ENV['NRA_DB_NAME'] %>

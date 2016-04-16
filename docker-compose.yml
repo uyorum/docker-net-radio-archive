@@ -21,10 +21,10 @@ net-radio-archive:
   links:
     - net-radio-db:net-radio.db
   environment:
-    - NRA_DBHost=net-radio.db
-    - NRA_DBUser=root
-    - NRA_DBPassword=password
-    - NRA_DBName=net-radio
-    - NRA_WorkingFilesRetentionPeriodDays=7
-    - NRA_ForceMp4=true
-    - NRA_ArchiveFilesRetentionPeriodDays=60
+    - NRA_DB_HOST=net-radio.db
+    - NRA_DB_USER=root
+    - NRA_DB_PASSWORD=password
+    - NRA_DB_NAME=net-radio
+    - NRA_WORKING_FILES_RETENTION_PERIOD_DAYS=7
+    - NRA_FORCE_MP4=true
+    - NRA_ARCHIVE_FILES_RETENTION_PERIOD_DAYS=60

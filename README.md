@@ -15,15 +15,15 @@ Run net-radio-archive in Docker container
 
 |環境変数|デフォルト|設定例|説明|
 |:-----|:------|:----|:--|
-|NRA_WorkingFilesRetentionPeriodDays|30|7|settings.ymlの`working_files_retention_period_days`|
-|NRA_RadikoChannels|(空)|QRR,LFT|settings.ymlの`radiko_channels`|
-|NRA_RadiruChannels|(空)|r1,r2,fm|settings.ymlの`radiru_channels`|
-|NRA_ForceMp4|false|true|settings.ymlの`force_mp4`|
-|NRA_DBHost|net-radio.db||database.ymlの`host`|
-|NRA_DBUser|root||database.ymlの`username`|
-|NRA_DBPassword|password||database.ymlの`password`|
-|NRA_DBName|net-radio||database.ymlの`database`|
-|NRA_ArchiveFilesRetentionPeriodDays|0|60|指定日数より古いファイルを自動で削除する(0=自動削除しない)|
+|NRA_WORKING_FILES_RETENTION_PERIOD_DAYS|30|7|settings.ymlの`working_files_retention_period_days`|
+|NRA_RADIKO_CHANNELS|(空)|QRR,LFT|settings.ymlの`radiko_channels`|
+|NRA_RADIRU_CHANNELS|(空)|r1,r2,fm|settings.ymlの`radiru_channels`|
+|NRA_FORCE_MP4|false|true|settings.ymlの`force_mp4`|
+|NRA_DB_HOST|net-radio.db||database.ymlの`host`|
+|NRA_DB_USER|root||database.ymlの`username`|
+|NRA_DB_PASSWORD|password||database.ymlの`password`|
+|NRA_DB_NAME|net-radio||database.ymlの`database`|
+|NRA_ARCHIVE_FILES_RETENTION_PERIOD_DAYS|0|60|指定日数より古いファイルを自動で削除する(0=自動削除しない)|
 
 ```bash
 $ git clone https://github.com/uyorum/docker-net-radio-archive

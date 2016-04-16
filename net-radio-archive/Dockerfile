@@ -18,15 +18,15 @@ RUN cd /tmp/gem && \
       mkdir -p /net-radio/working && \
       cd / && \
       rm -rf /tmp/gem
-ENV NRA_WorkingFilesRetentionPeriodDays=30 \
-      NRA_RadikoChannels="" \
-      NRA_RadiruChannels="" \
-      NRA_ForceMp4=false \
-      NRA_DBHost=net-radio.db \
-      NRA_DBUser=root \
-      NRA_DBPassword=password \
-      NRA_DBName=net-radio \
-      NRA_ArchiveFilesRetentionPeriodDays=0
+ENV NRA_WORKING_FILES_RETENTION_PERIOD_DAYS=30 \
+      NRA_RADIKO_CHANNELS="" \
+      NRA_RADIRU_CHANNELS="" \
+      NRA_FORCE_MP4=false \
+      NRA_DB_HOST=net-radio.db \
+      NRA_DB_USER=root \
+      NRA_DB_PASSWORD=password \
+      NRA_DB_NAME=net-radio \
+      NRA_ARCHIVE_FILES_RETENTION_PERIOD_DAYS=0
 COPY dummyfile /tmp/
 RUN cd / && \
       git clone https://github.com/yayugu/net-radio-archive && \

@@ -20,15 +20,15 @@ production:
     # radikoで録音するチャンネルを設定してください
     # channel code (QRRなど) についてはREADME.mdのFAQを参照してください
     radiko_channels:
-      <% ENV['NRA_RadikoChannels'].split(',').each do |c| %>
+      <% ENV['NRA_RADIKO_CHANNELS'].split(',').each do |c| %>
         - <%= c %>
-      <% end if ENV['NRA_RadikoChannels'] %>
+      <% end if ENV['NRA_RADIKO_CHANNELS'] %>
 
     # らじるらじるで録音するチャンネルを設定してください
     radiru_channels:
-      <% ENV['NRA_RadiruChannels'].split(',').each do |c| %>
+      <% ENV['NRA_RADIRU_CHANNELS'].split(',').each do |c| %>
         - <%= c %>
-      <% end if ENV['NRA_RadiruChannels'] %>
+      <% end if ENV['NRA_RADIRU_CHANNELS'] %>
 
     # ファイル名に含まれる単語からシムリンクを作成
     # archive_dirで設定したディレクトリ配下に 0_selections ディレクトリの作成、配下にシムリンク
@@ -40,7 +40,7 @@ production:
 
     # trueの場合、音声のみのコンテンツ(音泉、アニたま、Radiko、らじるらじる)を保存時に強制的にmp4へ変換します(再エンコードはかけないので音声は劣化しません)
     # Googleフォトなどにバックアップする際に便利です
-    force_mp4: <%= ENV['NRA_ForceMp4'] %>
+    force_mp4: <%= ENV['NRA_FORCE_MP4'] %>
 
     # AG-ON (導入難易度高め。詳しくはREADME参照)
     # 録画しない場合はこの項目ごと消すと何もしません
