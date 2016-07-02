@@ -5,8 +5,8 @@ mkdir -p /net-radio/working
 
 set | grep ^NRA_ | grep -v =$ > /var/spool/cron/crontabs/root
 echo "00 00 * * * rm -f /var/spool/mail/mail" >> /var/spool/cron/crontabs/root
-if [ "$NRA_ArchiveFilesRetentionPeriodDays" -gt 0 ]; then
-  echo "00 00 * * * find /net-radio/archive -type f -mtime +$NRA_ArchiveFilesRetentionPeriodDays -delete; find /net-radio/archive -type d -empty -delete" >> /var/spool/cron/crontabs/root
+if [ "$NRA_ARCHIVE_FILES_RETENTION_PERIOD_DAYS" -gt 0 ]; then
+  echo "00 00 * * * find /net-radio/archive -type f -mtime +$NRA_ARCHIVE_FILES_RETENTION_PERIOD_DAYS -delete; find /net-radio/archive -type d -empty -delete" >> /var/spool/cron/crontabs/root
 fi
 
 cd /net-radio-archive
